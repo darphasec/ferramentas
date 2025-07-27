@@ -14,9 +14,23 @@ Simular cenários de phishing realistas para:
 - Pesquisa em segurança cibernética
 
  🛠️ Instalação
-bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/phishing-simulator-advanced.git
 
-# Instale as dependências
-pip install -r requirements.txt
+ git clone https://github.com/seu-usuario/phishing-simulator-advanced.git
+cd phishing-simulator-advanced
+
+ Estrutura de arquivos (execute no terminal)
+
+ mkdir -p {static/css,templates,uploads,logs}
+touch app.py static/css/style.css templates/{base,login,dashboard,checkout}.html
+touch requirements.txt README.md WARNING.md .env.sample
+
+
+# Configurações básicas
+app.config.update(
+    SECRET_KEY='sua_chave_secreta',
+    UPLOAD_FOLDER='caminho/para/uploads',
+    WEBHOOK_URL='https://seu-webhook.com'  # Opcional
+)
+
+
+
