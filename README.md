@@ -1,33 +1,30 @@
+Sobre o Projeto
+Este projeto é uma ferramenta educacional que simula uma loja digital falsa para treinamento em conscientização sobre ataques de phishing.  
+Ele permite criar um ambiente de teste onde usuários podem ser expostos a práticas comuns de phishing, sem risco real, visando ensinar como identificar e evitar golpes.
 
+ Funcionalidades
+- Página de login falso para capturar credenciais de teste.
+- Página de checkout falso simulando roubo de dados de cartão.
+- Upload de documentos para análise de comportamento.
+- Logs detalhados de todas as interações.
+- Modo stealth para execução silenciosa.
+- Suporte a Webhook para envio dos dados simulados.
 
-
-Ferramenta educacional para testes de conscientização em segurança digital
-
- AVISO : Este projeto deve ser usado APENAS para fins educacionais e testes autorizados. Qualquer uso malicioso é expressamente proibido.
-
- Objetivo
-Simular cenário de phishing DE UMA LOJA online DE COURSus digitais de IT .........
-- Treinamento de equipes
-- Testes de conscientização
-- Pesquisa em segurança cibernética
+- ❗Uso estritamente educacional  
+Este projeto deve ser utilizado apenas em ambientes de teste controlados e com autorização.  
+ O uso indevido para fins maliciosos é ilegal e de total responsabilidade do usuário.
 
 Instalação
+Clone o repositório
 
-git clone ...............
- 
-Estrutura de arquivos (execute no terminal)
+Crie um ambiente virtual
+python3 -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
 
-mkdir -p {static/css,templates,uploads,logs}
-touch app.py static/css/style.css templates/{base,login,dashboard,checkout}.html
-touch requirements.txt README.md WARNING.md .env.sample
+Instale as dependências
+pip install -r requirements.txt
 
-
-# Configurações básicas
-app.config.update(
-    SECRET_KEY='sua_chave_secreta',
-    UPLOAD_FOLDER='caminho/para/uploads',
-    WEBHOOK_URL='https://seu-webhook.com'  # Opcional
-)
-
-
+ Iniciar o servidor
+ python phishing_simulator.py --port 5000 (a porta que desejar)
 
